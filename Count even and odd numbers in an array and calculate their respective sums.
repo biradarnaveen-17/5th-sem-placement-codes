@@ -1,0 +1,23 @@
+class Solution {
+    public int[] countOddEven(int[] arr) {
+        // Code here
+        int n = arr.length;
+        int e=0,ec=0,o=0,oc=0;
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]%2==0)
+            {
+                e++;
+                ec+=arr[i];
+            }
+            else
+            {
+                o++;
+                oc+=arr[i];
+            }
+        }
+        // this is ery very important how to return the answer
+        return new int[]{e,o,ec,oc}; 
+    }
+    
+}
